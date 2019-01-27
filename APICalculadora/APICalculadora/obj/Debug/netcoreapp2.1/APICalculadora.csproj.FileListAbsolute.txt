@@ -1,0 +1,14 @@
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\bin\Debug\netcoreapp2.1\APICalculadora.deps.json
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\bin\Debug\netcoreapp2.1\APICalculadora.runtimeconfig.json
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\bin\Debug\netcoreapp2.1\APICalculadora.runtimeconfig.dev.json
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\bin\Debug\netcoreapp2.1\APICalculadora.dll
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\bin\Debug\netcoreapp2.1\APICalculadora.pdb
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.csprojAssemblyReference.cache
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.RazorAssemblyInfo.cache
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.RazorAssemblyInfo.cs
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.AssemblyInfoInputs.cache
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.AssemblyInfo.cs
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.RazorTargetAssemblyInfo.cache
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.dll
+C:\Users\Jp-Ta\source\repos\APICalculadora\APICalculadora\obj\Debug\netcoreapp2.1\APICalculadora.pdb
