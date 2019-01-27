@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jp-Ta\\source\\repos\\APICalculadora\\APICalculadora\\APICalculadora.csproj",
+      "projectUniqueName": "C:\\Users\\Jp-Ta\\source\\repos\\AulasAPIs\\AprendendoAPIs\\APICalculadora\\APICalculadora\\APICalculadora.csproj",
       "projectName": "APICalculadora",
-      "projectPath": "C:\\Users\\Jp-Ta\\source\\repos\\APICalculadora\\APICalculadora\\APICalculadora.csproj",
+      "projectPath": "C:\\Users\\Jp-Ta\\source\\repos\\AulasAPIs\\AprendendoAPIs\\APICalculadora\\APICalculadora\\APICalculadora.csproj",
       "packagesPath": "C:\\Users\\Jp-Ta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jp-Ta\\source\\repos\\APICalculadora\\APICalculadora\\obj\\",
+      "outputPath": "C:\\Users\\Jp-Ta\\source\\repos\\AulasAPIs\\AprendendoAPIs\\APICalculadora\\APICalculadora\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
