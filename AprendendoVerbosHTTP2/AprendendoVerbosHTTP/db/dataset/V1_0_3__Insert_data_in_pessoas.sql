@@ -1,0 +1,1 @@
+﻿INSERT INTO pessoas VALUES(DEFAULT, "João", "Fernandes", "Rua Almeida", "Masculino");

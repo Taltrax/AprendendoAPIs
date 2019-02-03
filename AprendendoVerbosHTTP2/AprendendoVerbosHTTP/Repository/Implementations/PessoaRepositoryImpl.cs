@@ -66,18 +66,22 @@ namespace AprendendoVerbosHTTP.Repository.Implementations
         public Pessoa Update(Pessoa pessoa)
         {
 
-            if (!Exists(pessoa.ID)) return new Pessoa();
+            if (!Exists(pessoa.ID)) return null;
 
             var result = _dbContext.Pessoas.SingleOrDefault(p => p.ID.Equals(pessoa.ID));
 
-            try
+            if (result != null)
             {
-                _dbContext.Entry(result).CurrentValues.SetValues(pessoa);
-                _dbContext.SaveChanges();
+                try
+                {
+                    _dbContext.Entry(result).CurrentValues.SetValues(pessoa);
+                    _dbContext.SaveChanges();
 
-            }catch(Exception ex)
-            {
-                throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
 
             return pessoa;

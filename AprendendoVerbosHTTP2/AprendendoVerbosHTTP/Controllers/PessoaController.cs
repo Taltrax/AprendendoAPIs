@@ -48,7 +48,9 @@ namespace AprendendoVerbosHTTP.Controllers
         public ActionResult Put(Pessoa pessoa)
         {
             if (pessoa == null) return BadRequest();
-            return new ObjectResult(_pessoaBusiness.Update(pessoa));
+            var pessoaAtualizada = _pessoaBusiness.Update(pessoa);
+            if (pessoaAtualizada == null) return NotFound();
+            return new ObjectResult(pessoaAtualizada);
         }
 
         // DELETE api/v1/pessoa/5
