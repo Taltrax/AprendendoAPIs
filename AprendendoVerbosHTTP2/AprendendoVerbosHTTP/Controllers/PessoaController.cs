@@ -1,5 +1,5 @@
 ﻿using AprendendoVerbosHTTP.Model;
-using AprendendoVerbosHTTP.Services.Implementations;
+using AprendendoVerbosHTTP.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AprendendoVerbosHTTP.Controllers
@@ -11,25 +11,25 @@ namespace AprendendoVerbosHTTP.Controllers
     public class PessoaController : ControllerBase
     {
 
-        IPessoaService _pessoaService;
+        IPessoaBusiness _pessoaBusiness;
 
-        public PessoaController(IPessoaService pessoaService)
+        public PessoaController(IPessoaBusiness pessoaBusiness)
         {
-            _pessoaService = pessoaService;
+            _pessoaBusiness = pessoaBusiness;
         }
 
         // GET api/v1/pessoa
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_pessoaService.FindAll());
+            return Ok(_pessoaBusiness.FindAll());
         }
 
         // GET api/v1/pessoa/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var pessoa = _pessoaService.FindById(id);
+            var pessoa = _pessoaBusiness.FindById(id);
             if (pessoa == null) return NotFound();
             return Ok(pessoa);
         }
@@ -39,7 +39,7 @@ namespace AprendendoVerbosHTTP.Controllers
         public ActionResult Post(Pessoa pessoa)
         {
             if (pessoa == null) return BadRequest();
-            return new ObjectResult(_pessoaService.Create(pessoa));
+            return new ObjectResult(_pessoaBusiness.Create(pessoa));
             
         }
 
@@ -48,14 +48,14 @@ namespace AprendendoVerbosHTTP.Controllers
         public ActionResult Put(Pessoa pessoa)
         {
             if (pessoa == null) return BadRequest();
-            return new ObjectResult(_pessoaService.Update(pessoa));
+            return new ObjectResult(_pessoaBusiness.Update(pessoa));
         }
 
         // DELETE api/v1/pessoa/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            _pessoaService.Delete(id);
+            _pessoaBusiness.Delete(id);
             return NoContent();
         }
     }
