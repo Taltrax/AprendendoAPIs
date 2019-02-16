@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using AprendendoVerbosHTTP.Repository.Generic;
 using AprendendoVerbosHTTP.Business;
 using AprendendoVerbosHTTP.Business.Implementations;
+using Microsoft.Net.Http.Headers;
 
 namespace AprendendoVerbosHTTP
 {
@@ -33,6 +34,7 @@ namespace AprendendoVerbosHTTP
         public void ConfigureServices(IServiceCollection services)
         {
 
+            //Configurações para acesso a banco de dados
             var conexaoString = _configuration["MySqlConnection:MySqlConnectionString"];
             services.AddDbContext<MySQLContext>(options => options.UseMySql(conexaoString));
 
@@ -40,6 +42,7 @@ namespace AprendendoVerbosHTTP
             {
                 try
                 {
+                    //Adicionando o envolve (migrations)
                     var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(conexaoString);
                     var evolve = new Evolve.Evolve("evolve.json", evolveConnection, msg => _logger.LogInformation(msg))
                     {
@@ -57,12 +60,24 @@ namespace AprendendoVerbosHTTP
                     throw;
                 }
             }
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //Adicionando outros padrões de reposta como xml e json
+            services.AddMvc(options =>
+            {
+
+                options.RespectBrowserAcceptHeader = true;
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("text/xml"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+
+            }).AddXmlSerializerFormatters().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //Adicionando dependências
             services.AddScoped<IPessoaBusiness, PessoaBusinessImpl>();
             services.AddScoped<ILivroBusiness, LivroBusinessImpl>();
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
-            services.AddApiVersioning();
 
+            //Adicionando Versionamento
+            services.AddApiVersioning();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
