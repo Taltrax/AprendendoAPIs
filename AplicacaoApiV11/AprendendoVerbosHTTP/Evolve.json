@@ -1,0 +1,7 @@
+{
+  "Evolve.Driver": "MySQL.Data",
+  "Evolve.ConnectionString": "Server=192.168.99.100;Port=3306;Database=bancoapi;Uid=root;Pwd=docker;SslMode=none;",
+  "Evolve.Locations": "db",
+  "Evolve.Command": "",
+  "Evolve.Placeholder.table4": "table_4"
+}
